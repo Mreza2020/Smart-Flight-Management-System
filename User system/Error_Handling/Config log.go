@@ -13,11 +13,11 @@ var Log *zap.Logger
 func InitLogger(level zapcore.Level) {
 
 	lumberjackLogger := &lumberjack.Logger{
-		Filename:   LoodConfigFile().Log.Filename,
-		MaxSize:    LoodConfigFile().Log.MaxSize,
-		MaxBackups: LoodConfigFile().Log.MaxBackups,
-		MaxAge:     LoodConfigFile().Log.MaxAge,
-		Compress:   LoodConfigFile().Log.Compress,
+		Filename:   LoadConfigFile().Log.Filename,
+		MaxSize:    LoadConfigFile().Log.MaxSize,
+		MaxBackups: LoadConfigFile().Log.MaxBackups,
+		MaxAge:     LoadConfigFile().Log.MaxAge,
+		Compress:   LoadConfigFile().Log.Compress,
 	}
 
 	fileEncoder := zapcore.NewJSONEncoder(zapcore.EncoderConfig{
