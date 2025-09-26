@@ -34,10 +34,22 @@ Copyright (c) 2014 Alexandre Cesaro
 
 ---------------------------------------
 
-5-gRPC-Go      License  ==  [License](https://github.com/grpc/grpc-go?tab=Apache-2.0-1-ov-file "gRPC-Go")
+6-gRPC-Go      License  ==  [License](https://github.com/grpc/grpc-go?tab=Apache-2.0-1-ov-file "gRPC-Go")
 Apache License Version 2.0, January 2004
 
 ---------------------------------------
+
+7-zap  License  == [License](https://github.com/uber-go/zap?tab=MIT-1-ov-file "zap")
+Copyright (c) 2016-2024 Uber Technologies, Inc.
+
+---------------------------------------
+
+8-lumberjack   License  == [License](https://github.com/natefinch/lumberjack?tab=MIT-1-ov-file "lumberjack")
+Copyright (c) 2014 Nate Finch
+
+---------------------------------------
+
+
 > [!IMPORTANT]
 >Built as a realistic prototype to simulate the challenges and solutions of a full-scale airline management platform.
 

@@ -1,0 +1,29 @@
+{
+  "log": {
+    "filename": "app.log",
+    "maxSize": 10,
+    "maxBackups": 3,
+    "maxAge": 30,
+    "compress": true
+  },
+  "redis": {
+    "addr": "localhost:6379",
+    "password": "10",
+    "db": 3
+
+  },
+  "DBSql": {
+    "DB": "username:password@protocol(address:port)/dbname"
+  },
+  "email": {
+    "Email": "https://example.com",
+    "EmailPassword": "12345",
+    "EmailSmtpServer": "smtp.gmail.com",
+    "EmailPort": "465 ssl in 587 starttls ==== int"
+  },
+  "DBPostgres": {
+    "DB": "postgres://postgres:123@localhost:5432/mydb"
+  }
+
+}
+
