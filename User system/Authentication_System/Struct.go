@@ -15,3 +15,15 @@ var LevelCheck = []string{
 	"Moderator",
 	"Member",
 }
+
+type SignForm struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+	Level    string `json:"level"`
+	Code     string `json:"code"`
+}
+
+var Code = []string{
+	"12as12",
+	"lo106o5",
+}

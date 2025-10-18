@@ -48,4 +48,9 @@ func Login(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": fmt.Sprintf("Wrong Level: %s", l.Level)})
 		return
 	}
+	zap.L().Info("Login ok\"", zap.String("User", l.Username))
+	zap.L().Info("Login ok\"", zap.String("Level", l.Level))
+
+	c.JSON(200, gin.H{"Login ok": fmt.Sprintf("User %s", l.Level)})
+
 }
