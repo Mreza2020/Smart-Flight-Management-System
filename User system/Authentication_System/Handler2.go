@@ -1,15 +1,18 @@
 package Authentication_System
 
 import (
+	"User_system/Error_Handling"
 	"fmt"
 	"net/http"
 	"strings"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 func Sign(c *gin.Context) {
+	Error_Handling.InitLogger(zapcore.InfoLevel)
 	var s SignForm
 	if err := c.ShouldBindJSON(&s); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
