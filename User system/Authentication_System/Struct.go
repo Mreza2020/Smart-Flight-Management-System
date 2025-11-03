@@ -21,6 +21,7 @@ type SignForm struct {
 	Password string `json:"password"`
 	Level    string `json:"level"`
 	Code     string `json:"code"`
+	Email    string `json:"email"`
 }
 
 var Code = []string{

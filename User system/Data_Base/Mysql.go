@@ -9,18 +9,18 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
-func DBMysql() (*sql.DB, string) {
+func DBMysql() (*sql.DB, error) {
 	Error_Handling.InitLogger(zapcore.InfoLevel)
 	db, err := sql.Open("mysql", Error_Handling.LoadConfigFile().DBMysql.DB)
 	if err != nil {
 		zap.L().Error("not open mysql server", zap.String("err", err.Error()))
-		return nil, "err Connect"
+		return nil, err
 	}
 	if err = db.Ping(); err != nil {
 		zap.L().Error("not ping", zap.String("err", err.Error()))
-		return nil, "err ping"
+		return nil, err
 
 	}
 	zap.L().Info("Server started successfully")
-	return db, ""
+	return db, nil
 }
