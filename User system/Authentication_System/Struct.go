@@ -24,6 +24,10 @@ type SignForm struct {
 	Email    string `json:"email"`
 }
 
+type SignForm1 struct {
+	Otp string `json:"otp"`
+}
+
 var Code = []string{
 	"12as12",
 	"lo106o5",

@@ -55,7 +55,7 @@ func SecuritySing1(email string) string {
 
 }
 
-func SecuritySing2(email, otp1 string) string {
+func SecuritySing2(email string) string {
 	Error_Handling.InitLogger(zapcore.InfoLevel)
 	status := Data_Base.RunRedisServer()
 	zap.L().Warn("Redis status", zap.String("status", status))
@@ -63,7 +63,7 @@ func SecuritySing2(email, otp1 string) string {
 		otp := Capabilities.GetOtpFromRedis(email)
 		switch otp {
 		case "ok":
-			return "ok"
+			return otp
 		case "not":
 			return "not"
 		case "Error":
